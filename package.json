@@ -1,39 +1,40 @@
 {
-  "name": "varex-cli",
+  "name": "varex-workspace",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "main.ts",
-  "scripts": {
-    "dev": "tsx watch main.ts"
+  "description": "Varex CLI monorepo",
+
+  "packageManager": "pnpm@11.1.1",
+
+  "engines": {
+    "node": ">=22.0.0"
   },
+
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "clean": "turbo run clean"
+  },
+
   "keywords": [
     "varex",
     "cli",
-    "framework",
-    "backend",
     "typescript",
-    "node",
-    "api",
-    "express",
-    "router",
-    "controller"
+    "monorepo"
   ],
+
   "author": "andres",
   "license": "MIT",
-  "engines": {
-    "node": ">=24.0.0"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.1.1",
-      "onFail": "download"
-    }
-  },
-  "type": "module",
+
   "devDependencies": {
-    "@types/node": "^24.10.1",
-    "tsx": "^4.22.5",
+    "turbo": "^2.5.6",
     "typescript": "^5.9.3"
+  },
+
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
