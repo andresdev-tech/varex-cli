@@ -1,2 +1,47 @@
+packages:
+  # CLI Core
+  - "apps/cli"
+
+  # Core Packages (The Engine)
+  - "packages/core/common"
+  - "packages/core/core"
+  - "packages/core/kernel"
+
+  # Transformers (The Translators)
+  - "packages/transformers/html"
+  - "packages/transformers/json"
+  - "packages/transformers/markdown"
+  - "packages/transformers/toml"
+  - "packages/transformers/xml"
+
+  # Storage (The Memory)
+  - "packages/storage/redis"
+  - "packages/storage/sqlite"
+  
+  # Schedulers (The Clock)
+  - "packages/schedulers/cron"
+
+  # Builders (The Factory)
+  - "packages/builders/docker"
+  - "packages/builders/npm"
+  - "packages/builders/yarn"
+
+  # Notifiers (The Messenger)
+  - "packages/notifiers/email"
+  - "packages/notifiers/slack"
+  - "packages/notifiers/telegram"
+
+  # Utils (Helpers)
+  - "packages/utils/logger"
+  - "packages/utils/validation"
+  - "packages/utils/telemetry"
+
+  # Templates
+  - "packages/templates/dockerfile"
+
+  # Monitoring
+  - "packages/monitoring/prometheus"
+
+# Allows using esbuild for cross-platform builds (faster)
 allowBuilds:
   esbuild: true

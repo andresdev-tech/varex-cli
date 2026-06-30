@@ -2,8 +2,6 @@
   "name": "varex-workspace",
   "private": true,
   "version": "1.0.0",
-  "description": "Varex CLI monorepo",
-
   "packageManager": "pnpm@11.1.1",
 
   "engines": {
@@ -11,30 +9,14 @@
   },
 
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "start": "turbo run start",
+    "dev:cli": "turbo run dev --filter=@varex/cli",
+    "build:all": "turbo run build",
+    "start:cli": "turbo run start --filter=@varex/cli",
     "clean": "turbo run clean"
   },
 
-  "keywords": [
-    "varex",
-    "cli",
-    "typescript",
-    "monorepo"
-  ],
-
-  "author": "andres",
-  "license": "MIT",
-
   "devDependencies": {
-    "turbo": "^2.5.6",
+    "turbo": "^2.10.0",
     "typescript": "^5.9.3"
-  },
-
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
